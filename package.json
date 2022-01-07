@@ -1,0 +1,33 @@
+{
+  "name": "restful-api-case-study",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./app/server.js",
+    "devStart": "nodemon ./app/server.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/berkbuyukdurak/restful-api-case-study.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/berkbuyukdurak/restful-api-case-study/issues"
+  },
+  "homepage": "https://github.com/berkbuyukdurak/restful-api-case-study#readme",
+  "devDependencies": {
+    "jest": "^27.4.7",
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "lodash": "^4.17.21",
+    "winston": "^3.3.3"
+  }
+}
