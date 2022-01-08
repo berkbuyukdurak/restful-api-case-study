@@ -6,6 +6,7 @@ const ApiError = require('../errors/error');
 
 // Response Codes and Messages
 const responseCodesAndMessages = require('../utils/constants/http_response_status_codes_and_messages.json');
+const logger = require('../utils/logger/logger');
 
 const checkCountriesRequest = (req, res, next) => {
 
@@ -14,13 +15,13 @@ const checkCountriesRequest = (req, res, next) => {
     if(queryCheck || bodyCheck){
         next();
     }else{
-        let responsePayload = {};
-        let responseData = {
-            statusCode: responseCodesAndMessages.validation_error.statusCode,
-            message: responseCodesAndMessages.validation_error.message
-        };
-        responsePayload = apiResponse.apiResponsePayload(responseData);
-        res.status(responseData.statusCode).send(responsePayload);
+        const apiError = new ApiError();
+        apiError.message = responseCodesAndMessages.validation_error.message;
+        apiError.statusCode = responseCodesAndMessages.validation_error.statusCode;
+        responsePayload = apiResponse.apiResponsePayload(apiError);
+        const loggerError = `${apiError.message} Error Code: ${apiError.statusCode}`;
+        logger.error(loggerError);
+        res.status(responsePayload.statusCode).send(responsePayload);
     }
 }
 
