@@ -1,0 +1,22 @@
+{
+    "server_error": {
+        "message": "Internal Server Error!",
+        "statusCode": 500
+    },
+    "ok": {
+        "message": "OK",
+        "statusCode": 200
+    },
+    "not_found": {
+        "message": "The server cannot find the requested resource.",
+        "statusCode": 404
+    },
+    "validation_error": {
+        "message": "The request is not valid!",
+        "statusCode": 400
+    },
+    "data_not_found": {
+        "message": "No records were found within the specified date and count range.",
+        "statusCode": 404
+    }
+}
