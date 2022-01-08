@@ -25,8 +25,12 @@ const checkCountriesRequest = (req, res, next) => {
     }
 }
 
+const checkSalesrepRequest = (req, res, next) => {
+
+}
 
 
 module.exports = {
-    checkCountriesRequest
+    checkCountriesRequest,
+    checkSalesrepRequest
 }

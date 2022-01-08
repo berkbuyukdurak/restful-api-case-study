@@ -3,6 +3,7 @@ const router = require('express').Router();
 
 // Controllers
 const countriesCtrl = require('../controllers/countries.server.controller');
+const salesrepCtrl = require('../controllers/salesrep.server.controller');
 
 // Global API Response
 const apiResponse = require('../utils/api_response');
@@ -24,13 +25,11 @@ const responseCodesAndMessages = require('../utils/constants/http_response_statu
 */
 router.route('/countries').get(validatorMiddleware.checkCountriesRequest, countriesCtrl.getCountriesByRegion);
 
-router.route
 
 /**
  * Salesrep Endpoint
  */
-
-
+router.route('/salesrep').get(salesrepCtrl.getSalesrep);
 
 
 module.exports = router;
