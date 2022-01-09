@@ -192,8 +192,110 @@ Response body below with Http Status Code 400 and message Bad Request.
 | ---------------------------- | --------------------------------------------------------------- | ------------------------ 
 | GET /salesrep                | Returns all countries or returns countries by their regions     |  None                       | **
 
+#### Expected Response:
+
+Response body below with Http Status Code 200 and message OK.
+
+```json
+[
+    {
+        "region": "Apac",
+        "minSalesReq": 2,
+        "maxSalesReq": 3
+    },
+    {
+        "region": "Europe",
+        "minSalesReq": 6,
+        "maxSalesReq": 12
+    },
+    {
+        "region": "MEA",
+        "minSalesReq": 4,
+        "maxSalesReq": 9
+    },
+    {
+        "region": "America",
+        "minSalesReq": 4,
+        "maxSalesReq": 8
+    },
+    {
+        "region": "APAC",
+        "minSalesReq": 2,
+        "maxSalesReq": 2
+    }
+]
+```
 
 ## Optimal API
 | Method                       | Description                                                     | Required Fields
 | ---------------------------- | --------------------------------------------------------------- | ------------------------ 
 | GET /optimal                | Returns all countries or returns countries by their regions     |  None                       | **
+
+#### Expected Response:
+
+Response body below with Http Status Code 200 and message OK.
+
+```json
+[
+     {
+        "region": "Apac",
+        "countryList": [
+            "Indonesia",
+            "Japan",
+            "Singapore",
+            "Australia",
+            "Thailand"
+        ],
+        "countryCount": 5
+    },
+    {
+        "region": "Apac",
+        "countryList": [
+            "China",
+            "Malaysia",
+            "South Korea",
+            "Philippines",
+            "Republic of Korea"
+        ],
+        "countryCount": 5
+    },
+    {
+        "region": "Europe",
+        "countryList": [
+            "Slovenia",
+            "Croatia",
+            "Switzerland",
+            "Bosnia and Herzegovina",
+            "Finland",
+            "Kosovo",
+            "Ireland"
+        ],
+        "countryCount": 7
+    },
+    {
+        "region": "Europe",
+        "countryList": [
+            "Spain",
+            "Malta",
+            "Germany",
+            "Italy",
+            "Estonia",
+            "United Kingdom"
+        ],
+        "countryCount": 6
+    },
+    {
+        "region": "Europe",
+        "countryList": [
+            "Belgium",
+            "Ukraine",
+            "Iceland",
+            "Latvia",
+            "Lithuania",
+            "Czechia"
+        ],
+        "countryCount": 6
+    },
+    ...
+]
+```
