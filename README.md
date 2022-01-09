@@ -128,6 +128,65 @@ Response body below with Http Status Code 200 and message OK.
 ]
 ```
 
+#### Using query parameter to return countries by their region:
+Send GET request to get countries in the America region `/countries/?region=America`.
+
+#### Request body to return countries by their region:
+
+```json
+{
+    "region":"America"
+}
+```
+
+#### Expected Response:
+
+Response body below with Http Status Code 200 and message OK.
+
+```json
+[
+    {
+        "name": "Equador",
+        "region": "America"
+    },
+    {
+        "name": "United States",
+        "region": "America"
+    },
+    {
+        "name": "Guatemala",
+        "region": "America"
+    },
+    ...
+]
+```
+
+#### Invalid Request for Countries API
+
+region=all is case insensitive but other regions are not.
+
+#### Using query parameter to return countries by their region:
+Send GET request to get countries in the America region `/countries/?region=america`.
+
+#### Request body to return countries by their region:
+
+```json
+{
+    "region":"america"
+}
+```
+
+#### Expected Response:
+
+Response body below with Http Status Code 400 and message Bad Request.
+
+```json
+{
+    "statusCode": 400,
+    "message": "Request values are case sensitive!"
+}
+```
+
 ## Salesrep API
 | Method                       | Description                                                     | Required Fields
 | ---------------------------- | --------------------------------------------------------------- | ------------------------ 
