@@ -68,6 +68,10 @@ Time:        6.779 s
 Ran all test suites.
 ```
 
+# Endpoints
+
+There are 3 endpoints in this API.
+
 ## Countries API
 | Method                       | Description                                                     | Required Fields
 | ---------------------------- | --------------------------------------------------------------- | ------------------------ 
