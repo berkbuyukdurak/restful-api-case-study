@@ -206,6 +206,16 @@ describe("Testing the countries route with query parameter", () => {
 });
 
 /**
+* Testing POST Request to the Countries Route
+*/
+describe("Testing the countries route with POST Request", () => {
+    it("ERROR / For the POST Request", async () => {
+        const response = await request(app).post("/countries/?region=America");
+        expectErrorfulResponse(response, 400);
+    });
+});
+
+/**
 * SALESREP Route
 */
 describe("Testing the salesrep route", () => {
