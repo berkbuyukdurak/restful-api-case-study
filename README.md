@@ -196,6 +196,11 @@ Response body below with Http Status Code 400 and message Bad Request.
 | ---------------------------- | --------------------------------------------------------------- | ------------------------ 
 | GET /salesrep                | Returns all countries or returns countries by their regions     |  None                       | **
 
+## Example Request
+
+Send GET request to `/salesrep`.
+
+
 #### Expected Response:
 
 Response body below with Http Status Code 200 and message OK.
@@ -234,6 +239,10 @@ Response body below with Http Status Code 200 and message OK.
 | Method                       | Description                                                     | Required Fields
 | ---------------------------- | --------------------------------------------------------------- | ------------------------ 
 | GET /optimal                | Returns all countries or returns countries by their regions     |  None                       | **
+
+## Example Request
+
+Send GET request to `/optimal`.
 
 #### Expected Response:
 
