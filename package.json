@@ -3,6 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "jest": {
+    "testPathIgnorePatterns": [
+      "./config/env/test.js"
+    ]
+  },
+  "engines": {
+    "node": ">14.0.0"
+  },
   "scripts": {
     "start": "node ./app/server.js",
     "devStart": "nodemon ./app/server.js",
@@ -21,7 +29,8 @@
   "homepage": "https://github.com/berkbuyukdurak/restful-api-case-study#readme",
   "devDependencies": {
     "jest": "^27.4.7",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "supertest": "^6.1.6"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -31,6 +40,7 @@
     "lodash": "^4.17.21",
     "mongoose": "^6.1.5",
     "request": "^2.88.2",
+    "swagger-ui-express": "^4.3.0",
     "winston": "^3.3.3"
   }
 }
