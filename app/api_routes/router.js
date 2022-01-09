@@ -4,6 +4,7 @@ const router = require('express').Router();
 // Controllers
 const countriesCtrl = require('../controllers/countries.server.controller');
 const salesrepCtrl = require('../controllers/salesrep.server.controller');
+const optimalCtrl = require('../controllers/optimal.server.controller');
 
 // Global API Response
 const apiResponse = require('../utils/api_response');
@@ -30,6 +31,11 @@ router.route('/countries').get(validatorMiddleware.checkCountriesRequest, countr
  * Salesrep Endpoint
  */
 router.route('/salesrep').get(salesrepCtrl.getSalesrep);
+
+/**
+ * Bonus Endpoint
+ */
+router.route('/optimal').get(optimalCtrl.getOptimalRoster)
 
 
 module.exports = router;
