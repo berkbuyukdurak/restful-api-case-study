@@ -76,7 +76,7 @@ Ran all test suites.
 ## Example Requests
 
 #### Using query parameter to return all countries:
-Send GET request to ``/countries/?region=all`.
+Send GET request to `/countries/?region=all`.
 
 #### Request body to return all countries:
 
@@ -84,6 +84,48 @@ Send GET request to ``/countries/?region=all`.
 {
     "region":"all"
 }
+```
+
+#### Expected Response:
+
+Response body below with Http Status Code 200 and message OK.
+
+```json
+[
+    {
+        "name": "Japan",
+        "region": "Apac"
+    },
+    {
+        "name": "Sweden",
+        "region": "Europe"
+    },
+    {
+        "name": "United Kingdom",
+        "region": "Europe"
+    },
+    {
+        "name": "China",
+        "region": "Apac"
+    },
+    {
+        "name": "France",
+        "region": "Europe"
+    },
+    {
+        "name": "Morocco",
+        "region": "MEA"
+    },
+    {
+        "name": "Kenya",
+        "region": "MEA"
+    },
+    {
+        "name": "United Arab Emirates",
+        "region": "MEA"
+    },
+    ...
+]
 ```
 
 ## Salesrep API
