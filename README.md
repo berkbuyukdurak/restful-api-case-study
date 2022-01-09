@@ -72,3 +72,27 @@ Ran all test suites.
 | Method                       | Description                                                     | Required Fields
 | ---------------------------- | --------------------------------------------------------------- | ------------------------ 
 | GET /countries               | Returns all countries or returns countries by their regions     |  region                       | **
+
+## Example Requests
+
+#### Using query parameter to return all countries:
+Send GET request to ``/countries/?region=all`.
+
+#### Request body to return all countries:
+
+```json
+{
+    "region":"all"
+}
+```
+
+## Salesrep API
+| Method                       | Description                                                     | Required Fields
+| ---------------------------- | --------------------------------------------------------------- | ------------------------ 
+| GET /salesrep                | Returns all countries or returns countries by their regions     |  None                       | **
+
+
+## Optimal API
+| Method                       | Description                                                     | Required Fields
+| ---------------------------- | --------------------------------------------------------------- | ------------------------ 
+| GET /optimal                | Returns all countries or returns countries by their regions     |  None                       | **
