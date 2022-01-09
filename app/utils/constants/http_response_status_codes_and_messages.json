@@ -9,7 +9,7 @@
     },
     "not_found": {
         "message": "Request values are case sensitive!",
-        "statusCode": 404
+        "statusCode": 400
     },
     "bad_request": {
         "message": "The request could not be understood! The server cannot find the requested URL!",

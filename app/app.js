@@ -35,8 +35,12 @@ app.use('/', router.use(errorHandlerHelper));
 app.all('*', (req, res, next) => {
     let invalidMethod = "";
     const message = "Requested URL --> " + req.originalUrl + " - " +responseCodesAndMessages.bad_request.message;
-    next(new ApiError(invalidMethod + message, responseCodesAndMessages.not_found.statusCode));
+    if(!_.isEqual(req.method, 'GET')){
+        invalidMethod = `Invalid Request Method! --> ${req.method} | Only GET Request is Accepted! `;
+    }
+    next(new ApiError(invalidMethod + message, responseCodesAndMessages.bad_request.statusCode));
 });
+
 
 app.use(errorHandlerHelper);
 
