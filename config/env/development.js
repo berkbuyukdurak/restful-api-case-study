@@ -6,8 +6,8 @@ module.exports = {
         timeout: 3000
     },
     server: {
-        port: process.env.DEV_HOST || 3000,
-        hostname: process.env.DEV_SERVER || 'localhost'
+        port: process.env.DEV_PORT || 3000,
+        hostname: process.env.DEV_HOST || 'localhost'
     },
 
     database: {
