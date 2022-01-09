@@ -1,5 +1,6 @@
 const logger = require('../utils/logger/logger');
 const apiResponse = require('../utils/api_response');
+const _ = require('lodash');
 
 const responseCodesAndMessages = require('../utils/constants/http_response_status_codes_and_messages.json');
 
@@ -27,7 +28,11 @@ const getSalesrep = async(req, res, next) => {
             logger.error(returnNotFound);
         }
 
-        res.status(responsePayload.statusCode).send(responsePayload);
+        if(_.isEqual(responsePayload.statusCode, 200)){
+            res.status(responsePayload.statusCode).send(responsePayload.data);
+        }else{
+            res.status(responsePayload.statusCode).send(responsePayload);
+        }
 
     });
 };

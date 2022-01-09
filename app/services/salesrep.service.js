@@ -4,7 +4,6 @@ const _ = require('lodash');
 // SalesRep Helper
 const salesrepHelper = require('../helpers/salesrep.helper');
 
-
 const getSalesRepByRegions = () => {
     return new Promise(resolve => {
         const options = {
@@ -18,7 +17,7 @@ const getSalesRepByRegions = () => {
     }).then(value => {
         // Countries data is retrieved.
         let json = JSON.parse(value);
-        const salesRepRequirementsByRegion = salesrepHelper.calculateSalesRepsByRegion(json.data);
+        const salesRepRequirementsByRegion = salesrepHelper.calculateSalesRepsByRegion(json);
         return salesRepRequirementsByRegion;
     });
 }

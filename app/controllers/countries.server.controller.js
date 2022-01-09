@@ -21,12 +21,20 @@ const getCountriesByRegion = async(req, res, next) => {
         if(!_.isEqual(_.lowerCase(payloadToSent), "all")){
             countriesService.findCountriesWithTheirRegion(payloadToSent).then(returnedData => {
                 let responseToSent = preparePayload(returnedData);
-                res.status(responseToSent.statusCode).send(responseToSent);    
+                if(_.isEqual(responseToSent.statusCode, 200)){
+                    res.status(responseToSent.statusCode).send(responseToSent.data);
+                }else{
+                    res.status(responseToSent.statusCode).send(responseToSent);
+                }    
             });
         }else{
             countriesService.findAllCountries().then(returnedData => {
                 let responseToSent = preparePayload(returnedData);
-                res.status(responseToSent.statusCode).send(responseToSent);   
+                if(_.isEqual(responseToSent.statusCode, 200)){
+                    res.status(responseToSent.statusCode).send(responseToSent.data);
+                }else{
+                    res.status(responseToSent.statusCode).send(responseToSent);
+                }
             });
         }
     }
