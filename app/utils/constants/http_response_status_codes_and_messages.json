@@ -8,15 +8,15 @@
         "statusCode": 200
     },
     "not_found": {
-        "message": "The server cannot find the requested resource.",
+        "message": "Request values are case sensitive!",
         "statusCode": 404
     },
-    "validation_error": {
-        "message": "The request is not valid!",
+    "bad_request": {
+        "message": "The request could not be understood! The server cannot find the requested URL!",
         "statusCode": 400
     },
     "data_not_found": {
-        "message": "No records were found within the specified date and count range.",
+        "message": "The server has not found anything matching the Request-URI",
         "statusCode": 404
     }
 }

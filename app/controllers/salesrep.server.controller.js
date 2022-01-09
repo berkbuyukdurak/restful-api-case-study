@@ -22,8 +22,8 @@ const getSalesrep = async(req, res, next) => {
             const returnSuccess = `${successMessage} ${responsePayload.statusCode}`;
             logger.info(returnSuccess);
         }else{
-            responsePayload.statusCode = responseCodesAndMessages.not_found.statusCode;
-            responsePayload.message = responseCodesAndMessages.not_found.message;
+            responsePayload.statusCode = responseCodesAndMessages.data_not_found.statusCode;
+            responsePayload.message = responseCodesAndMessages.data_not_found.message;
             const returnNotFound = `${responsePayload.message} ${responsePayload.statusCode}`;
             logger.error(returnNotFound);
         }
