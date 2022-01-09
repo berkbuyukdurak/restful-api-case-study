@@ -97,5 +97,6 @@ const prepareSalesRepresentativeForEachRegion = (countries, salesRepCount) => {
 
 
 module.exports = {
-    setSalesRepresentativeRoster
+    setSalesRepresentativeRoster,
+    prepareSalesRepresentativeForEachRegion
 }

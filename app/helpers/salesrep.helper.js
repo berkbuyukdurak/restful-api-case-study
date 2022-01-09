@@ -81,5 +81,6 @@ const calculateSalesRepresentatives = (group) => {
 
 
 module.exports = {
-    calculateSalesRepsByRegion
+    calculateSalesRepsByRegion,
+    calculateSalesRepresentatives
 }

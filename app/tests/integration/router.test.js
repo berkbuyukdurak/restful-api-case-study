@@ -211,31 +211,30 @@ describe("Testing the countries route with query parameter", () => {
 describe("Testing the countries route with POST Request", () => {
     it("ERROR / For the POST Request", async () => {
         const response = await request(app).post("/countries/?region=America");
-        expectErrorfulResponse(response, 400);
+        expectUndefinedRoutesErrorfulResponse(response, 400);
     });
 });
 
 /**
 * SALESREP Route
-*/
+*
 describe("Testing the salesrep route", () => {
     it("SUCCESS / For the salesrep route", async () => {
         const response = await request(app).get("/salesrep");
         expectSuccessfulResponse(response, 200);
     });
-});
+});/
 
 /**
 * OPTIMAL Route
-*/
+*
 describe("Testing the optimal route", () => {
     it("SUCCESS / For the salesrep route", async () => {
         const response = await request(app).get("/optimal");
         expectSuccessfulResponse(response, 200);
     });
 });
-
-
+*/
 
 
 

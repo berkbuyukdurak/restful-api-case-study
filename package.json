@@ -29,6 +29,7 @@
   "homepage": "https://github.com/berkbuyukdurak/restful-api-case-study#readme",
   "devDependencies": {
     "jest": "^27.4.7",
+    "mockingoose": "^2.15.2",
     "nodemon": "^2.0.15",
     "supertest": "^6.1.6"
   },
